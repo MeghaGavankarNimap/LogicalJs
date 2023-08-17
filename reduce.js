@@ -58,3 +58,28 @@ function fib(num){
 }
 const num=5
 console.log(fib(num))
+
+// prime num from 1 to n
+function prime(i){
+  for(j=2;j<i;j++){
+      if(i%j==0){
+          return false
+      }
+      
+  }
+  return true
+
+  
+}
+for(let i=1;i<=100;i++){
+  if(prime(i)){
+      console.log("prime"+i)
+      
+      
+  }
+  else{
+     console.log("not prime"+i) 
+  }
+}
+
+
