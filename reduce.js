@@ -34,3 +34,27 @@ function isRev(str){
 }
 const str="radar"
 console.log(isRev(str))
+
+// fibonaccei series
+function fib(num){
+  let n1=0;
+  let n2=1;
+  let next
+  console.log(n1);
+  console.log(n2);
+  next=n1+n2
+   while(next<num){
+// for(let i=1;i<num-1;i++){
+      console.log(next)
+      n1=n2
+      n2=next
+      next=n1+n2
+     
+      
+      
+      
+  }
+  return next 
+}
+const num=5
+console.log(fib(num))
