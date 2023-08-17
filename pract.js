@@ -1,6 +1,6 @@
 function isPrime(nums){
 
-    for(let i=2;i<=nums;i++){
+    for(let i=2;i<nums;i++){
             if((nums%i)==0){
                return false 
             }
@@ -8,7 +8,7 @@ function isPrime(nums){
       
       return true  
     }
-    const num=[12,30,54,9]
+    const num=[12,30,54,9,13]
     for(const nums of num){
         if(isPrime(nums)){
             console.log("prime number:"+nums)
