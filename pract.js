@@ -57,3 +57,25 @@ const arr= [12, 35, 1, 10, 34, 1, 35]
 console.log(secLar(arr))
 
 
+// find second largest val from duplicte no including array
+function secLar(arr1){
+    let max=arr1[0]
+    let sec=arr1[0]
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]>max){
+             sec=max
+            max=arr1[i]
+           
+        }
+        else if(arr1[i]>sec && arr[i]!=max){
+            sec=arr1[i]
+            
+            
+        }
+    }
+    return sec
+}
+const arr1= [12, 35, 1, 10, 34, 1, 35]
+console.log(secLar(arr1))
+
+
