@@ -33,3 +33,27 @@ function dup(arr){
  return ans
 }
 console.log(dup(arr))
+
+// second largest
+function secLar(arr){
+    let max=arr[0]
+    let sec=arr[0]
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i]
+            sec=max
+        }
+        else if(arr[i]<max){
+            sec=max
+            
+            
+        }
+    }
+    return sec
+    
+    
+}
+const arr= [12, 35, 1, 10, 34, 1, 35]
+console.log(secLar(arr))
+
+
