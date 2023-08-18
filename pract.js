@@ -18,3 +18,18 @@ function isPrime(nums){
         }
         
     }
+
+    // find duplicate num
+const arr=[4,8,2,8,10,2]
+const ans=[]
+function dup(arr){
+   for(let i=0;i<arr.length;i++){
+    for(let j=i+1;j<arr.length-1;j++){
+        if(arr[i]==arr[j]){
+            ans.push(arr[i])
+        }
+    }
+  }
+ return ans
+}
+console.log(dup(arr))
