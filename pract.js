@@ -78,4 +78,21 @@ function secLar(arr1){
 const arr1= [12, 35, 1, 10, 34, 1, 35]
 console.log(secLar(arr1))
 
+//subject in angular
+// to pass the data use next and to read data use subscribe
+// in behavior sub we dont have to use next method .without using next we can subscribe the behavior sub because we initialized the value in behavior subject.
+// but If we write next method in befunction fact(num) {
+
+// factorial
+let ans2 = 1;
+    for (let i = 2; i <= num2; i++) {
+        ans2 *= i;
+    }
+    return ans2;
+
+
+const num2 = 3;
+console.log(fact(num2));
+
+
 
