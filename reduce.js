@@ -17,23 +17,29 @@ console.log(remaining);
 
 
 // palindrome 
-function isRev(str){
-     ans=''
-     for(let i=str.length-1;i>=0;i--){
-        ans+=str[i]
-       
-         
-     }
-     if(ans==str){
-          return ans
-     }
-     return 'not a palindrome'
-     
-    
-    
+function rev(str){
+  // return str.split('').reverse().join('')
+  let ori
+ ori=str.toLowerCase()
+ console.log(ori)
+  let change=''
+  for(let i=ori.length-1;i>=0;i--){
+       change+=ori[i]
+  }
+
+  if(ori==change){
+      return str+" is a palindrome"
+  }
+ else{
+      return str+" is a not palindrome"
+ }
+ 
+  
 }
-const str="radar"
-console.log(isRev(str))
+const str="Radar"
+const val=rev(str)
+console.log(val)
+
 
 // fibonaccei series
 function fib(num){
