@@ -17,3 +17,12 @@ var b=23
 // type error=const should be ini and declare
 // syntax error=if we do not initi and declare val in same line then it will give syn error
 
+
+let func = function foo() {
+    return 'hello';
+  }
+  
+  console.log(typeof foo);
+//  it return undefined
+// In named function expressions, the name is local only to the function body and is not available from outside. So foo doesn’t exist in the global scope.
+
