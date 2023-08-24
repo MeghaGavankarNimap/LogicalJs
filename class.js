@@ -19,4 +19,10 @@ let val=arr.sort((a,b)=>{
 });
 console.log(val)
 
+// splice
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2,1,"abc")
+console.log(fruits)
+// splice=(add ele at index,remove ele where added new ele,number of ele)
+
   
