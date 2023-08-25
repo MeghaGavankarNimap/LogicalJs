@@ -56,14 +56,24 @@ dist:"mum"
 // console.log(copy)
 // console.log(val1)
 
-let copiedValue={...val}
-copiedValue.name="xyz"
-console.log(copiedValue)
-console.log(val)
-copiedValue={
-    ...copiedValue,
-    name:'klm'
+// let copiedValue={...val}
+// copiedValue.name="xyz"
+// console.log(copiedValue)
+// console.log(val)
+// copiedValue={
+//     ...copiedValue,
+//     name:'klm'
+// }
+
+
+let arr = ["apple", "mango", "apple", "orange", "mango", "mango"];
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
 }
+
+console.log(removeDuplicates(arr));
+// here spread operator is used to set new array in arr
 
 
 
