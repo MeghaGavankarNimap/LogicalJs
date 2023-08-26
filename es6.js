@@ -76,6 +76,30 @@ console.log(removeDuplicates(arr));
 // here spread operator is used to set new array in arr
 
 
+// remove duplicate elemet
+
+function rem(arr){
+    const unique=[]
+    for(let i=0;i<arr.length;i++){
+        let duplicate=false;
+       for(let j=0;j<unique.length;j++) {
+           if(arr[i]===unique[j]){
+             duplicate=true
+               break;
+           }}
+          if(!duplicate){
+              unique.push(arr[i])
+          }
+       
+    }
+    return unique;
+}
+
+let arr = [2,5,1,5,2,1];
+console.log(rem(arr));
+
+
+
 
 
 
