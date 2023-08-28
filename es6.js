@@ -99,6 +99,18 @@ let arr = [2,5,1,5,2,1];
 console.log(rem(arr));
 
 
+// doubt
+
+'use strict';
+
+var num =7;
+
+function num() {
+  return 10;
+}
+
+console.log(num());
+
 
 
 
