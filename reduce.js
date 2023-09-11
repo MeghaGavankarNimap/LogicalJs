@@ -88,4 +88,31 @@ for(let i=1;i<=100;i++){
   }
 }
 
+// fibonacci using recurssion
+function fib(num){
+   
+  if(num<=0){
+      return []
+  }
+  else if(num==1){
+      return [0]
+  }
+  else if(num==2){
+      return [0,1]
+  }
+  
+  else {
+    let val=fib(num-1)
+    let ans= val[val.length-1]+val[val.length-2]
+    val.push(ans)
+    return val
+    
+  }
+      
+  
+}
+const num=5
+console.log(fib(num))
+
+
 
