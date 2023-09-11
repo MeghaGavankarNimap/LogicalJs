@@ -114,5 +114,32 @@ console.log(num());
 
 
 
+// ffunction secLar(arr){
+   let max=arr[0]
+   let sec=arr[0]
+   let third=arr[0]
+   for(let i=1;i<arr.length;i++){
+       if(arr[i]>max){
+           third=sec
+            sec=max
+           max=arr[i]
+          
+       }
+       else if(arr[i]>sec&&arr[i]!==max){
+             third=sec
+           sec=arr[i]
+       }
+        else if(arr[i]>third&&arr[i]!==max&& arr[i]!==sec){
+             third=arr[i]
+          
+       }
+       
+   }
+   return third
+}
+
+let arr = [22,57,11,50,23,61];
+console.log(secLar(arr));
+
 
 
