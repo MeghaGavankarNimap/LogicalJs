@@ -1,0 +1,26 @@
+dialoge.afterclosed=used when data in dialogbox want and to display
+dialoge.closed=used when only dialog box has to be closed.
+
+Datasource=it is used to manage and display data in various Angular components, such as tables (e.g., <mat-table>)
+by using datasource we can use pagination,filtering,sorting
+
+sorting
+To add sorting behavior to the table, add the matSort directive to the table and add mat-sort-header to each column header cell that should trigger sorting. 
+mat-sort-header in Angular Material allows users to sort data in both ascending and descending order by clicking on the column header.
+
+skip(1)=will skip selected value,here 1
+distinctUntilChanged=emit only distinct or unique value
+take(1)= Take only the first emitted value
+
+Difference in view child and output dec
+both are used to access child into parent but the difference is @Output is used for sending events from child to parent, while @ViewChild is used for accessing child components or DOM elements in the parent component.
+so basically in outpt we can tahe events or fun from child or custome logic and can change that logic further in parent.
+
+
+
+difference in ngoninit and ngafterviewinit
+In summary, ngOnInit is called when the component and its inputs/properties are ready, but the view is not fully constructed, whereas ngAfterViewInit is called after the view is fully constructed and rendered
+
+
+
+ 
