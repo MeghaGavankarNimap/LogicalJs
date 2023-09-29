@@ -1,0 +1,73 @@
+Mutability refers to data types that can be accessed and changed after they've been created and stored in memory. 
+Immutability,refers to data types that you can't change after creating them – but that you can still access in the memory.
+Mutable:
+Array.prototype.pop()
+Array.prototype.push()
+Array.prototype.shift()
+Array.prototype.unshift()
+Array.prototype.reverse()
+Array.prototype.sort()
+Array.prototype.splice()
+
+immutable:
+Array.prototype.splice()
+Array.prototype.concat()
+
+
+Array.prototype.filter()
+Array.prototype.map()
+
+
+spread and rest operator:
+spread operator is used to combine the elements .
+ var array1 = [10, 20, 30, 40, 50];
+    var array2 = [60, 70, 80, 90, 100];
+    var array3 = [...array1, ...array2];
+   console.log(array3);
+
+here in array 3 we will get expanded array containing all values.
+
+it is also used to copy the object
+
+
+rest paramter:it is used to store the parameter into one (word)
+
+for each loop
+array.forEach((currentValue, index, arr) => {
+    // Your code here
+}, thisValue);
+
+
+
+
+behavior subject example
+ private dataSubject = new BehaviorSubject<string>('Initial Value');
+  data$ = this.dataSubject.asObservable();
+
+  updateData(newValue: string) {
+    this.dataSubject.next(newValue);
+  }
+
+
+
+
+ constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.dataService.data$.subscribe((value) => {
+      this.data = value;
+    });
+
+
+
+takeuntil rxjs
+The takeUntil operator in RxJS is used to complete an observable when another(second) observable emits its first value. 
+if there are two obervables then wehn 1st obser emitting some value ,when second obser emits its 1st val at that time 1st observable stop emitting the values.
+mostly we use in muthoot as 1st observable as filter and second as destroy where we call distreoy in ngondistroy .so when we go from one com to other then ngondestroy called and unsubscribe all data and filter stop
+
+
+
+
+
+
+
