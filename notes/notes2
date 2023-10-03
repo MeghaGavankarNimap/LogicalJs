@@ -1,0 +1,32 @@
+mutable and immutable obj: 
+primitive types are immutable and its always create deep copy.
+immutable means does not change in original val.it will create cloned obj.
+
+deep copy-pass by value
+
+json.parse(json.stringfy) will not work for function in object.as it will not acces function in copied obj from original obj.
+
+object.assign({},originalvalue) will work for this but it will give partial deep copy
+object.assign({refernce obj},originalvalue)
+but this will not work for nested obj.becoz in this if chnage the value of 2nd obj of copied obj this will chnage value in 2nd obj of original obj also.
+
+spread operator also crete partial deep copy.as value in nested obj also get change in original obj.
+but we can change it if used spread operator inside spread operator.
+
+lodash and underscore.js library can used for complete deep copy in js
+
+
+
+
+pipes:
+built in pipes :
+date,uppercase,async 
+
+
+npm install @angular/cli@12.2.12
+
+
+
+
+
+
