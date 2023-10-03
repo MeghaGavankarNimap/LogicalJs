@@ -7,7 +7,7 @@ Array.prototype.shift()
 Array.prototype.unshift()
 Array.prototype.reverse()
 Array.prototype.sort()
-Array.prototype.splice()
+Array.prototype.slice()
 
 immutable:
 Array.prototype.splice()
