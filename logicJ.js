@@ -35,3 +35,6 @@ function secLar(arr) {
 
 const arr = [12, 5, 70, 55, 20, 70];
 console.log(secLar(arr)); // Output: 55
+
+
+
