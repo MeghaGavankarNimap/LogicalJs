@@ -1,0 +1,74 @@
+
+angular routing parameter
+Required Parameters
+Optional Parameters
+Query Parameters
+Navigation Extras
+
+1)Required Parameters
+//Declaration
+const appRoutes:Routes = [{path:employee/:id,component:abcComp}]
+// Here id is added as required parameter 
+
+//Implementation in Ts (typescript)
+let id = 2 // It can be dynamic 
+this.route.navigate(['employee',id])
+
+// Catching The Route Parameter in Ts
+ constructor (private route :ActivatedRoute){
+ }
+let id = parseInt(this.route.snapshot.paraMap.get('id'))
+
+
+2)optional parameter 
+const appRoutes:Routes = [{path:employee,component:abcComp}]
+// You dont need to set optional parameter in routing 
+//Implementation
+this.route.navigate(['employee',{name:'ab'}]) // You can add multiple by using ,separated  key for example {name:'ab',id:'1'}
+or
+this.route.navigate(['employee'], { queryParams: { name: 'ab', id: '1' } });
+// Catching 
+constructor (private route :ActivatedRoute){
+ }
+let name = this.route.snapshot.paraMap.get('name')
+or
+  this.route.queryParams.subscribe((queryParams) => {
+    const name = queryParams['name'];
+
+3)query parameter
+// Declaration 
+const appRoutes:Routes = [{path:employee,component:abcComp}]
+// You dont need to set Query parameter in routing
+// Implementation in Ts
+this.route.navigate(['employee'],{queryParams:{name:'a'}})
+//queryParamsHandling='Merge' or 'retain' these options is also used to retain the parameters or to merge them 
+// Catching in Ts 
+constructor(private route :ActivateRoute){
+ }
+let name = this.route.snapshot.queryParamMap.get('name');
+
+
+
+// Query parameters are typically used for scenarios where you want to pass various options, criteria, or settings
+//  to a page, such as filtering, sorting, or specifying user preferences. They are versatile and allow you to pass
+//   multiple values and customize behavior dynamically.
+
+// ptional route parameters are typically used when you need to include additional context or configuration as part of the route path, but making them optional means the route can still match and work without them
+
+
+
+// there are only two types of parameter:
+// optional and route parameter
+// this.route.navigate('path',data value)              this is router
+// this.route.snapshot.queryParamMap.get('name');      this is from activatedRoute
+
+
+// Query parameters are not part of the route path but are included in the URL query string.
+// They are used to pass data as key-value pairs in the URL, separated by ? and & symbols.
+// this.route.navigate('path',{key:val})              this is router
+
+
+
+// navigation Extras
+// It allows you to customize and control various aspects of the navigation process, providing additional options 
+// like You can use NavigationExtras to specify query parameters when navigating to a route. This is often used when you want to pass data to a route as key-value pairs in the URL query string.

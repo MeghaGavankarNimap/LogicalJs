@@ -1,0 +1,12 @@
+Constructor: This is the first method called when an instance of the component is created. 
+
+
+ngOnInit:
+Purpose: Called once after the component is initialized.
+Use Cases: Typically used for initialization tasks, such as fetching initial data or setting up subscriptions.
+
+
+ngDoCheck: This hook is called during every change detection cycle. It's not necessarily called immediately 
+after ngOnInit but can be triggered multiple times during the component's lifecycle.
+
+
