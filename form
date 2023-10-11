@@ -1,0 +1,108 @@
+
+<form [formGroup]="ReactiveForm" (ngSubmit)="onSubmit()">
+  <div>
+      <label>Enter name</label>
+      <input type="text" formControlName="name">
+
+  </div>
+  <div class="formArrayName">
+      <ng-container formArrayName="skills">
+          <label>Skils</label>
+          <ng-container *ngFor="let skill of HobbyControl;let i = index">
+              <input type="text" class="form-control" [formControlName]="i" pattern="^[a-z]{8,15}$">
+              <div *ngIf="skill.invalid">Error</div>
+          </ng-container>
+      </ng-container>
+
+      <button type="button" class="btn btn-sm btn-light mt-3" (click)="AddSkills()">+Add Skills</button>
+  </div>
+  <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+      <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ts file
+
+
+
+ReactiveForm!: FormGroup;
+  constructor() { }
+  ngOnInit() {
+    this.ReactiveForm = new FormGroup({
+      name: new FormControl(),
+      skills: new FormArray([
+        new FormControl('', [Validators.required, Validators.pattern(/^[a-z]{8,15}$/)])
+      ]),
+
+    });
+
+    console.log(this.ReactiveForm.controls['skills'] as FormArray)
+  }
+
+  gettType(i: any) {
+    return typeof i
+  }
+
+  get HobbyControl() {
+    return (<FormArray>this.ReactiveForm.get('skills')).controls
+  }
+
+
+  AddSkills() {
+    const control = new FormControl(null, Validators.required);
+    // here FormArray is a typecasting used that is we have give it
+
+    (<FormArray>this.ReactiveForm.get('skills')).push(control)
+    console.log((<FormArray>this.ReactiveForm.get('skills')));
+    // this console is used to check which control is getting added
+  }
+
+  isValid(skill: AbstractControl) {
+    const error: any = skill.errors;
+    if(error.required) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+
+  onSubmit() {
+    console.log(this.ReactiveForm.value);
+
+  }
+}
+
+
+
+
