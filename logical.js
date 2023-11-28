@@ -260,3 +260,15 @@ function pair(val){
 }
 let val='Engineer'
 console.log(pair(val))
+
+// recurssion general syntax
+function recurse() {
+    if(condition) {
+        recurse();
+    }
+    else {
+        // stop calling recurse()
+    }
+}
+
+recurse();

@@ -142,4 +142,29 @@ let arr = [22,57,11,50,23,61];
 console.log(secLar(arr));
 
 
+// count words in letter
+function myfun(b){
+    let s = "ten";
+    let count= 0
+   for(let i=0;i<b.length;i++){
+    let t = b[i]+b[i+1]+b[i+2];
+       
+       if(s==t){
+           count++
+       }
+}
+     return count
+}
+
+let b = "hfksdjfrwtenfsdjhtenaiosufuten";
+console.log(myfun(b))
+
+
+
+ for(let i=0;i<s.length;i++){
+        if(s[i].includes(b)&&s[i+1].includes(b)&&s[i+2].includes(b)){
+            count++
+        }
+
+
 
