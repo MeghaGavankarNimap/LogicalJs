@@ -162,7 +162,7 @@ let ans=0
  
 
 // 19. count lowercase and uppercase
-// input = "Helloworld"
+// input = "world"
 // output = uppercase = 1, lowercase = 9
 
 function ans(input){
@@ -272,3 +272,26 @@ function recurse() {
 }
 
 recurse();
+
+
+// count lowercase and uppercase
+function myfun(input){
+   
+    // let val=input.split('')
+     let capitalcount=0
+    let smallcount=0
+   for(let i=0;i<input.length;i++){
+    //   let val=input.charCodeAt(i)
+    //   console.log(val)
+       if(input[i]>='A' && input[i]<='Z'){
+           capitalcount++
+       }
+       else if(input[i]>='a' && input[i]<='z'){
+           smallcount++
+       }
+   }
+    return [capitalcount,smallcount]
+}
+
+input = "HelloWorld!"
+console.log(myfun(input))

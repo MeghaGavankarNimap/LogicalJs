@@ -58,3 +58,26 @@ function ischeck(str){
 }
 const str="engineer"
 console.log(ischeck(str))
+
+
+// find occurance of element in an array
+function myfun(array){
+    let arr={}
+    let count
+    for(let i=0;i<array.length;i++){
+       count=0
+    for(let j=0;j<array.length;j++){
+          if(array[i]===array[j]){
+              count++
+              
+          }  
+         
+        }
+       arr[array[i]]=count
+       
+    }
+    return arr
+}
+
+array = [1,1,2,3,4,4,3,2,1,5]
+console.log(myfun(array))

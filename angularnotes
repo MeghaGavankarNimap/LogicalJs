@@ -12,9 +12,11 @@ const appRoutes:Routes = [{path:employee/:id,component:abcComp}]
 
 //Implementation in Ts (typescript)
 let id = 2 // It can be dynamic 
+route:router()
 this.route.navigate(['employee',id])
 
 // Catching The Route Parameter in Ts
+// activatedroute methods are used to take data from router
  constructor (private route :ActivatedRoute){
  }
 let id = parseInt(this.route.snapshot.paraMap.get('id'))
@@ -72,3 +74,10 @@ let name = this.route.snapshot.queryParamMap.get('name');
 // navigation Extras
 // It allows you to customize and control various aspects of the navigation process, providing additional options 
 // like You can use NavigationExtras to specify query parameters when navigating to a route. This is often used when you want to pass data to a route as key-value pairs in the URL query string.
+
+// In many cases, query parameters are more suitable for optional data that doesn't impact the route structure, while optional parameters are useful when you want certain parts of the route to be optional and part of the route structure.
+
+
+
+
+
