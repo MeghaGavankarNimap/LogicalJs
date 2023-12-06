@@ -168,3 +168,41 @@ console.log(myfun(b))
 
 
 
+
+// anagram
+function myfun(val1,val2){
+    let data1={}
+    let data2={}
+  
+    for(let i=0;i<val1.length;i++){
+        let count1=0
+        for(let j=0;j<val1.length;j++){
+            if(val1[i]===val1[j]){
+               count1++
+            }
+            data1[val1[i]]=count1
+        }
+     }
+
+    for(let k=0;k<val2.length;k++){
+        let count2=0
+        for(let l=0;l<val2.length;l++){
+            if(val2[k]===val2[l]){
+               count2++
+            }
+            data2[val2[k]]=count2
+        }
+       
+    }
+    
+    if(_.isEqual(data1,data2)){
+        return data1+"is a anagram"
+    }
+    else{
+        return data1+"is not  a anagram"
+    }
+  
+}
+const val1="abcd"
+const val2="bcda"
+console.log(myfun(val1,val2))
