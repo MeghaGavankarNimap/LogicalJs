@@ -1,0 +1,53 @@
+enc dec algorithm
+aes256,512 she256 hmac
+private key and public key exchnage among the parties
+sender will encrypt the data and receiver will decrypt the data
+private key is with issuer nd public key i swith subscriber.
+CryptoJS.aes256,DES,HmacSHA256,HmacSHA224,HDS etc
+
+
+if(action==e){
+
+}
+
+
+secretKey: A private key used for encryption and decryption.
+secretIv: An initialization vector used to add an extra layer of security during encryption.
+encryptMethod: Specifies the encryption algorithm and key size (AES-256-CBC in this case).
+
+method(data,action){
+    if(action==e){
+      const cipher=CryptoJS.AES.encrypt(data,key,{
+        iv,encryptMethod
+      })
+      return {key:cipher.tostring()}
+
+    }
+
+
+    else if(action==d){
+
+    }
+}
+
+
+SHA algorithm
+original data+hash function==hash value/digest
+we use hash function to convert input into hask digest and here using SHA hash algorithm.
+
+Secure Hash algorithm:
+NSA & NIST joint development
+Has multiple families such as SHA-0,SHA-1,SHA-2,SHA-3 
+SHA-2 familiy has same hash function with diffent block size namely SHA-256 ans SHA-512,SHA 256 uses 32 bit words and 512 uses 64 bit words.
+Length of the original message should be less than 2^64 bit for SHA-1 nad SHA 256.
+
+1 byte=8 bit
+Each character is 16bit that is 2 byte.
+The length of diget is always 160 bits in length.
+origialmessage+padding bits(addition data to make multiple of 512)=total length to be 64 bits less than multiple of 512.
+eg. if you have a 400-bit message, you need to add 112 bits of padding to make it 512 bits.
+5 buffers(to stores data) are used of 32 bits each.
+They are 5 words named  A,B,C,D,E.
+the first iteration has fixed hexadecimal values.
+
+
